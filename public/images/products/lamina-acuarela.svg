@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FAF3EA"/>
+      <stop offset="1" stop-color="#E8D4BE"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#F0E7D8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="65%">
+      <stop offset="0" stop-color="#FFF9F2"/>
+      <stop offset="1" stop-color="#FFF9F2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#6B4423" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="650" cy="150" r="230" fill="#D9B795" opacity=".24"/>
+  <circle cx="100" cy="700" r="180" fill="#C8956C" opacity=".12"/>
+  <rect width="800" height="800" fill="url(#glow)"/>
+  <ellipse cx="400" cy="680" rx="250" ry="34" fill="#6B4423" opacity=".10"/>
+  <g transform="rotate(-3 400 400)" filter="url(#shadow)">
+    <rect x="220" y="165" width="360" height="460" rx="10" fill="#8B5A3C"/>
+    <rect x="242" y="187" width="316" height="416" rx="4" fill="url(#paper)"/>
+    <circle cx="474" cy="298" r="72" fill="#D9A67C" opacity=".75"/>
+    <path d="M300 512 C310 430 345 384 400 350 C455 384 490 430 500 512 Z" fill="#7F8C6B" opacity=".75"/>
+    <path d="M400 350 C380 410 378 470 390 520 C420 468 432 404 400 350 Z" fill="#A7B18A" opacity=".8"/>
+    <g fill="none" stroke="#6F7D58" stroke-width="5" stroke-linecap="round" opacity=".8">
+      <path d="M400 512 C354 466 330 432 318 392"/>
+      <path d="M400 512 C446 466 470 432 482 392"/>
+      <path d="M400 512 C388 452 390 410 400 374"/>
+    </g>
+    <g fill="#C8956C">
+      <ellipse cx="330" cy="400" rx="20" ry="10" transform="rotate(-35 330 400)"/>
+      <ellipse cx="462" cy="390" rx="20" ry="10" transform="rotate(35 462 390)"/>
+    </g>
+    <rect x="220" y="165" width="360" height="460" rx="10" fill="none" stroke="#6B4423" stroke-width="14" opacity=".55"/>
+    <path d="M252 210 L348 198" stroke="#FFFDF8" stroke-width="8" opacity=".55"/>
+  </g>
+</svg>
