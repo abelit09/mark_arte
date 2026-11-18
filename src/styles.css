@@ -1215,6 +1215,15 @@ button.category-card {
   font-weight: 700;
 }
 
+.order-note {
+  padding: 8px 12px;
+  background: var(--bg-alt);
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  font-size: 12px !important;
+  line-height: 1.5;
+}
+
 /* Toast */
 .toast {
   position: fixed;

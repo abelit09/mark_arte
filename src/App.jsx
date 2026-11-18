@@ -13,6 +13,7 @@ import Testimonials from './components/Testimonials.jsx'
 import Toast from './components/Toast.jsx'
 import TrustBar from './components/TrustBar.jsx'
 import { useCart } from './context/CartContext.jsx'
+import { catalogUrl } from './lib/config.js'
 
 function scrollToProducts() {
   document.getElementById('productos')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -40,8 +41,8 @@ export default function App() {
 
       try {
         const [productsResponse, categoriesResponse] = await Promise.all([
-          fetch('/api/products', { signal: controller.signal }),
-          fetch('/api/categories', { signal: controller.signal }),
+          fetch(catalogUrl('products'), { signal: controller.signal }),
+          fetch(catalogUrl('categories'), { signal: controller.signal }),
         ])
 
         if (!productsResponse.ok || !categoriesResponse.ok) {

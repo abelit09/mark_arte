@@ -1,3 +1,5 @@
+import { assetUrl } from '../lib/config.js'
+
 export default function Hero() {
   return (
     <section id="inicio" className="hero">
@@ -21,7 +23,7 @@ export default function Hero() {
         </div>
         <div className="hero-image">
           <img
-            src="/images/hero-artisan.svg"
+            src={assetUrl('images/hero-artisan.svg')}
             alt="Mesa de taller con cerámica, textiles y decoración artesanal"
           />
           <div className="hero-float-card">

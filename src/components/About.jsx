@@ -1,10 +1,12 @@
+import { assetUrl } from '../lib/config.js'
+
 export default function About() {
   return (
     <section id="acerca" className="about">
       <div className="container about-grid">
         <div className="about-img">
           <img
-            src="/images/about-artisan.svg"
+            src={assetUrl('images/about-artisan.svg')}
             alt="Manos de artesano dando forma a una pieza de cerámica"
           />
         </div>

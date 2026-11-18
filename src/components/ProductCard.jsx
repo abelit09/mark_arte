@@ -1,4 +1,5 @@
 import { FREE_SHIPPING_THRESHOLD, formatCurrency } from '../../shared/commerce.js'
+import { assetUrl } from '../lib/config.js'
 
 export default function ProductCard({ product, onAdd }) {
   const badgeClassName = product.badgeType === 'sale'
@@ -9,7 +10,7 @@ export default function ProductCard({ product, onAdd }) {
     <article className="product-card">
       <div className="product-img">
         <img
-          src={product.image}
+          src={assetUrl(product.image)}
           alt={product.name}
           width="800"
           height="800"

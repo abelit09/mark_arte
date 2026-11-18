@@ -5,6 +5,7 @@
 - `npm install` - install dependencies (Node 20.12+; project is ESM via `"type": "module"`).
 - `npm run dev` - Express + Vite middleware + HMR at `http://localhost:3000`.
 - `npm run build` - build the React client to `dist/`.
+- `npm run build:pages` - build the static GitHub Pages demo: base `/mark_arte/`, catalog exported to `dist/api/*.json`, checkout simulated in the browser. Override the base with `VITE_BASE_PATH`.
 - `npm start` - serve `dist/` and the API on port 3000 with Express. Run `npm run build` first.
 - `npx impeccable detect src/ --json` - run the Impeccable UI anti-pattern detector (`impeccable` dev dependency). An empty array means no findings.
 - No test, lint, typecheck, or formatter scripts are configured; verify changes in the browser and with the API.
@@ -20,6 +21,16 @@
 - Styles live in `src/styles.css` and are imported by `src/main.jsx`. Keep the existing CSS variables, class names, and responsive breakpoints.
 - Product and editorial artwork is local SVG under `public/images/`: `products/<slug>.svg` per catalog item, plus `hero-artisan.svg`, `about-artisan.svg`, and `favicon.svg`. The catalog references them with absolute paths such as `/images/products/taza-ceramica.svg`. Keep the shared 800×800 viewBox and warm earthy palette when adding art.
 - Typography uses `--font-display` (serif) for headings and `--font-body` for text; keep new UI on those tokens instead of introducing new font stacks.
+- `src/lib/config.js` owns the deploy base path and static-demo mode. Build image URLs through `assetUrl()` and catalog URLs through `catalogUrl()`; never hardcode `/images/...` or `/api/...` in components.
+- `scripts/build-pages.mjs` sets `VITE_STATIC_DEMO=true` and `VITE_BASE_PATH`, runs the Vite build, then `scripts/export-static-data.mjs` writes the catalog JSON into `dist/api/`.
+
+## Deployment
+
+- GitHub Pages serves static files only, so the Express API does not exist there. The Pages build uses exported JSON for the catalog and a browser-side mock checkout.
+- `.github/workflows/deploy-pages.yml` builds and deploys on every push to `develop`. Enable it once under Settings → Pages → Source: GitHub Actions.
+- The project site lives at `https://<owner>.github.io/mark_arte/`; `VITE_BASE_PATH` must keep the trailing slash.
+- For a custom domain or user site, build with `VITE_BASE_PATH=/` and update the workflow accordingly.
+- The full Express app (`npm start`) still needs a Node host; GitHub Pages cannot run it.
 
 ## Gotchas
 

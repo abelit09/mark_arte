@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useCart } from '../context/CartContext.jsx'
-import { FREE_SHIPPING_THRESHOLD, formatCurrency } from '../../shared/commerce.js'
+import {
+  FREE_SHIPPING_THRESHOLD,
+  formatCurrency,
+  getShippingCost,
+  roundCurrency,
+} from '../../shared/commerce.js'
+import { assetUrl, isStaticDemo } from '../lib/config.js'
 
 export default function CartDrawer({ onClose }) {
   const {
@@ -38,8 +44,25 @@ export default function CartDrawer({ onClose }) {
   }, [onClose])
 
   async function handleCheckout() {
-    setCheckingOut(true)
     setCheckoutError('')
+
+    if (isStaticDemo) {
+      const orderSubtotal = roundCurrency(
+        items.reduce((sum, item) => sum + item.price * item.quantity, 0),
+      )
+      const orderShipping = getShippingCost(orderSubtotal)
+
+      clearCart()
+      setOrder({
+        orderId: `MA-${Date.now().toString(36).toUpperCase()}`,
+        subtotal: orderSubtotal,
+        shipping: orderShipping,
+        total: roundCurrency(orderSubtotal + orderShipping),
+      })
+      return
+    }
+
+    setCheckingOut(true)
 
     try {
       const response = await fetch('/api/orders', {
@@ -93,6 +116,11 @@ export default function CartDrawer({ onClose }) {
             <p>Tu pedido fue registrado correctamente.</p>
             <p className="order-id">Pedido: {order.orderId}</p>
             <p className="order-total">Total: {formatCurrency(order.total)}</p>
+            {isStaticDemo ? (
+              <p className="order-note">
+                Demo estática: el pedido no se envía a ningún servidor.
+              </p>
+            ) : null}
             <button type="button" className="btn btn-primary" onClick={onClose}>
               Seguir comprando
             </button>
@@ -113,7 +141,7 @@ export default function CartDrawer({ onClose }) {
                 <div className="cart-list">
                   {items.map((item) => (
                     <article className="cart-item" key={item.id}>
-                      <img src={item.image} alt={item.name} />
+                      <img src={assetUrl(item.image)} alt={item.name} />
                       <div className="cart-item-info">
                         <span className="product-cat">{item.category}</span>
                         <h4>{item.name}</h4>
