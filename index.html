@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkArte - Tienda Online de Productos Artesanales</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="brand">
+        <h1 class="logo">MarkArte</h1>
+        <p class="tagline">Tu tienda online de productos artesanales</p>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#novedades">Novedades</a></li>
+          <li><a href="#descuentos">Descuentos</a></li>
+          <li><a href="#acerca">Acerca de</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <form class="search-form" onsubmit="event.preventDefault()">
+          <input type="text" id="Buscar" name="Buscar" placeholder="Buscar productos...">
+          <button type="submit" aria-label="Buscar">🔍</button>
+        </form>
+        <button class="cart-btn" aria-label="Carrito de compras">🛒 <span class="cart-count">0</span></button>
+        <a href="#login" class="btn btn-outline">Iniciar Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">✨ Hecho a mano con amor</span>
+        <h2>Descubre piezas únicas<br>hechas por artesanos</h2>
+        <p>Calidad, tradición y creatividad en cada producto. Apoya el trabajo independiente y lleva a casa algo
+          especial.</p>
+        <div class="hero-actions">
+          <a href="#productos" class="btn btn-primary">Ver productos</a>
+          <a href="#categorias" class="btn btn-secondary">Explorar categorías</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>+500</strong><span>Productos</span></div>
+          <div><strong>+120</strong><span>Artesanos</span></div>
+          <div><strong>100%</strong><span>Artesanal</span></div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=beautiful%20artisan%20pottery%20ceramics%20handmade%20warm%20lighting%20aesthetic%20shop&image_size=landscape_4_3"
+          alt="Productos artesanales destacados">
+      </div>
+    </div>
+  </section>
+
+  <section id="categorias" class="categories">
+    <div class="container">
+      <div class="section-heading">
+        <h3>Categorías</h3>
+        <p>Encuentra lo que buscas por tipo de artesanía</p>
+      </div>
+      <div class="category-grid">
+        <a href="#" class="category-card">
+          <div class="category-img">🏺</div>
+          <h4>Cerámica</h4>
+          <span>42 productos</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-img">🧶</div>
+          <h4>Textiles</h4>
+          <span>68 productos</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-img">💍</div>
+          <h4>Joyería</h4>
+          <span>89 productos</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-img">🪵</div>
+          <h4>Madera</h4>
+          <span>35 productos</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-img">🕯️</div>
+          <h4>Decoración</h4>
+          <span>56 productos</span>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-img">🎨</div>
+          <h4>Arte</h4>
+          <span>27 productos</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos" class="products">
+    <div class="container">
+      <div class="section-heading">
+        <h3>Productos destacados</h3>
+        <p>Los favoritos de nuestros clientes</p>
+      </div>
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=handmade%20ceramic%20mug%20earth%20tones%20artisan&image_size=square_hd"
+              alt="Taza de cerámica artesanal">
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Cerámica</span>
+            <h4>Taza de cerámica "Tierra"</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(24)</span></div>
+            <div class="product-footer">
+              <span class="price">$24.90</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=hand%20woven%20wool%20scarf%20colorful%20textile%20artisan&image_size=square_hd"
+              alt="Bufanda de lana tejida a mano">
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Textiles</span>
+            <h4>Bufanda de lana "Otoño"</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(58)</span></div>
+            <div class="product-footer">
+              <span class="price">$39.50</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=handmade%20silver%20earrings%20boho%20jewelry%20artisan&image_size=square_hd"
+              alt="Aretes de plata artesanales">
+            <span class="product-badge badge-sale">-20%</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Joyería</span>
+            <h4>Aretes de plata "Luna"</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(112)</span></div>
+            <div class="product-footer">
+              <div>
+                <span class="price price-old">$45.00</span>
+                <span class="price">$36.00</span>
+              </div>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=hand%20carved%20wooden%20cutting%20board%20artisan%20kitchen&image_size=square_hd"
+              alt="Tabla de madera tallada a mano">
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Madera</span>
+            <h4>Tabla de madera nogal</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(37)</span></div>
+            <div class="product-footer">
+              <span class="price">$58.00</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=handmade%20soy%20candle%20aesthetic%20warm%20home%20decor&image_size=square_hd"
+              alt="Vela aromática artesanal">
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Decoración</span>
+            <h4>Vela aromática de soya</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(89)</span></div>
+            <div class="product-footer">
+              <span class="price">$18.90</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=handmade%20macrame%20wall%20hanging%20boho%20decor&image_size=square_hd"
+              alt="Tapiz de macramé">
+            <span class="product-badge badge-sale">-15%</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Decoración</span>
+            <h4>Tapiz de macramé "Bohemio"</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(46)</span></div>
+            <div class="product-footer">
+              <div>
+                <span class="price price-old">$62.00</span>
+                <span class="price">$52.70</span>
+              </div>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=handmade%20leather%20bag%20rustic%20artisan&image_size=square_hd"
+              alt="Bolso de cuero artesanal">
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Textiles</span>
+            <h4>Bolso de cuero "Viaje"</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(73)</span></div>
+            <div class="product-footer">
+              <span class="price">$89.00</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=hand%20painted%20watercolor%20art%20print%20nature&image_size=square_hd"
+              alt="Lámina de arte acuarela">
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Arte</span>
+            <h4>Lámina "Naturaleza" acuarela</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(31)</span></div>
+            <div class="product-footer">
+              <span class="price">$29.90</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="center">
+        <a href="#" class="btn btn-secondary">Ver todos los productos</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="descuentos" class="promo-banner">
+    <div class="container promo-content">
+      <div>
+        <span class="promo-tag">🔥 Oferta limitada</span>
+        <h3>¡Hasta 40% de descuento en artículos seleccionados!</h3>
+        <p>No te pierdas estas ofertas exclusivas en productos artesanales únicos.</p>
+      </div>
+      <a href="#" class="btn btn-primary btn-lg">Ver ofertas</a>
+    </div>
+  </section>
+
+  <section id="novedades" class="new-arrivals">
+    <div class="container">
+      <div class="section-heading">
+        <h3>Novedades</h3>
+        <p>Las últimas piezas añadidas a nuestra colección</p>
+      </div>
+      <div class="product-grid cols-4">
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=handmade%20terracotta%20vase%20minimalist%20artisan&image_size=square_hd"
+              alt="Jarrón de terracota">
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Cerámica</span>
+            <h4>Jarrón de terracota minimalista</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(9)</span></div>
+            <div class="product-footer">
+              <span class="price">$44.90</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=handmade%20beaded%20bracelet%20natural%20stones%20artisan&image_size=square_hd"
+              alt="Pulsera de piedras naturales">
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Joyería</span>
+            <h4>Pulsera piedras naturales</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(14)</span></div>
+            <div class="product-footer">
+              <span class="price">$22.00</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=handmade%20crochet%20baby%20blanket%20pastel%20colors&image_size=square_hd"
+              alt="Manta de crochet para bebé">
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Textiles</span>
+            <h4>Manta crochet bebé "Nube"</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(6)</span></div>
+            <div class="product-footer">
+              <span class="price">$48.00</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=handmade%20wooden%20toy%20car%20vintage%20style%20artisan&image_size=square_hd"
+              alt="Juguete de madera">
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Madera</span>
+            <h4>Autito de madera vintage</h4>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(11)</span></div>
+            <div class="product-footer">
+              <span class="price">$34.50</span>
+              <button class="btn btn-primary btn-sm">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="acerca" class="about">
+    <div class="container about-grid">
+      <div class="about-img">
+        <img
+          src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=artisan%20craftsman%20hands%20working%20pottery%20studio%20warm&image_size=landscape_4_3"
+          alt="Artesano creando piezas de cerámica">
+      </div>
+      <div class="about-text">
+        <span class="section-label">Nuestra historia</span>
+        <h3>Hecho a mano, hecho con corazón</h3>
+        <p>MarkArte nació con el sueño de conectar a talentosos artesanos locales con personas que valoran lo auténtico.
+          Cada pieza que encuentras aquí lleva consigo horas de trabajo, dedicación y una historia única.</p>
+        <ul class="about-list">
+          <li>✅ Apoyamos directamente a más de 120 artesanos independientes</li>
+          <li>✅ Materiales sostenibles y procesos respetuosos con el ambiente</li>
+          <li>✅ Cada pieza es única y lleva la firma de su creador</li>
+          <li>✅ Envíos seguros y garantía de satisfacción</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Conoce más sobre nosotros</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-heading">
+        <h3>Lo que dicen nuestros clientes</h3>
+        <p>Miles de personas confían en MarkArte</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"La calidad de la cerámica es increíble. Se nota que está hecha con mucho cuidado. ¡Volveré a comprar!"</p>
+          <div class="testimonial-author">
+            <strong>María González</strong>
+            <span>Cliente verificado</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Me encanta apoyar a artesanos locales. El bolso de cuero superó mis expectativas, vale cada centavo."</p>
+          <div class="testimonial-author">
+            <strong>Carlos Ramírez</strong>
+            <span>Cliente verificado</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Envío rápido, empaque precioso y el producto igual a las fotos. MarkArte es mi tienda favorita ahora."</p>
+          <div class="testimonial-author">
+            <strong>Sofía Mendoza</strong>
+            <span>Cliente verificado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="container newsletter-content">
+      <div>
+        <h3>¡Suscríbete a nuestro newsletter!</h3>
+        <p>Recibe ofertas exclusivas, novedades y consejos sobre productos artesanales directamente en tu correo.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="event.preventDefault()">
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit" class="btn btn-primary">Suscribirme</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>MarkArte</h4>
+        <p>Tu tienda online de productos artesanales únicos, hechos a mano con amor por artesanos locales.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Tienda</h4>
+        <ul>
+          <li><a href="#productos">Todos los productos</a></li>
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#novedades">Novedades</a></li>
+          <li><a href="#descuentos">Ofertas</a></li>
+          <li><a href="#acerca">Artesanos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Envíos y entregas</a></li>
+          <li><a href="#">Cambios y devoluciones</a></li>
+          <li><a href="#">Métodos de pago</a></li>
+          <li><a href="#">Contáctanos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="contact-list">
+          <li>📍 Dirección: Av. Principal 123, Ciudad</li>
+          <li>📞 Teléfono: +34 600 000 000</li>
+          <li>✉️ Email: hola@markarte.com</li>
+          <li>🕐 Lun-Vie: 9:00 - 18:00</li>
+        </ul>
+        <div class="payment-methods">
+          <span class="payment-icon">💳 Visa</span>
+          <span class="payment-icon">💳 Mastercard</span>
+          <span class="payment-icon">🏦 PayPal</span>
+          <span class="payment-icon">💰 Transferencia</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 MarkArte. Todos los derechos reservados.</p>
+        <div class="footer-links">
+          <a href="#">Política de privacidad</a>
+          <a href="#">Términos y condiciones</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
